@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Document</title>
+    <title>Animal</title>
+    <link rel="icon" 
+      type="image/png" 
+      href="assets/images/Logo.jpeg">
+</head>
+<body>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="index.html" class="brand-logo">Looking to adopt?</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="animal.html">Dogs</a></li>
+                <li><a href="animal.html">Cats</a></li>
+                <li><a href="animal.html">Other</a></li>
+                <li><a href="sign-up.html">Sign-up</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="row">
+        <form class="col s12">
+            <div class="row">
+                <div class="input-field col s3">
+                    <input  id="first_name" type="text" class="validate">
+                    <label for="first_name">First Name</label>
+                </div>
+    
+                <div class="input-field col s3">
+                    <input id="last_name" type="text" class="validate">
+                    <label for="last_name">Last Name</label>
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="input-field col s3">
+                    <input id="password" type="password" class="validate">
+                    <label for="password">Password</label>
+                </div>
+    
+                <div class="input-field col s3">
+                    <input id="email" type="email" class="validate">
+                    <label for="email">Email</label>
+                </div>
+            </div>
+        </form>
+    </div>
+    <button class="btn waves-effect waves-light submit-create" type="submit" name="action">Submit</button>
+
+
+
+
+
+
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyD4XEQTSSGXKScb2OWlrXiQHvLV-7Hu4eU",
+            authDomain: "petawesome-90b32.firebaseapp.com",
+            databaseURL: "https://petawesome-90b32.firebaseio.com",
+            projectId: "petawesome-90b32",
+            storageBucket: "petawesome-90b32.appspot.com",
+            messagingSenderId: "344811635391"
+        };
+        firebase.initializeApp(config);
+    </script>
+   
+   <script src="assets/javascript/setLocalAnimal.js"></script>
+   <script src="assets/javascript/accountData.js"></script>
+    
+</body>
+</html>

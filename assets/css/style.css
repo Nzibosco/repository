@@ -1,0 +1,185 @@
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+html, body{
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.nav-wrapper {
+    background-color: #009900;
+    color: rgba(143, 20, 20, 0.986);
+    
+}
+.info {
+    margin: auto; width:60%; text-align: center; font-family: cursive;
+}
+
+#logo{
+width:400px; height:174px;
+}
+
+#fixIt {
+    align-content: center;
+    margin: auto;
+    width: 60%;
+    text-align: center;
+    font-family: cursive;   
+}
+#zip_code, placeholder {
+    text-align: center;
+    font-size: 35px;
+    border-bottom-color: #009900;
+    border-bottom-style: solid;
+    width: 300px;  
+}
+/* The side navigation menu */
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 250px;
+    top: 65px;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+  }
+  
+  /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+  div.content {
+    margin-left: 260px;
+    padding: 1px 16px;
+    height: 100%;
+  }
+  
+  /* On screens that are less than 700px wide, make the sidebar into a topbar , we also style other page contents*/
+  @media screen and (max-width: 700px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+      margin-bottom: 70px;
+    }
+    .sidebar a {float: left;}
+    div.content {margin-left: 0;}
+
+    #logo {
+        width: 100%;
+        height:100%;
+    }
+    h3{
+        font-size: 20px;
+    }
+    #zip_code, placeholder {
+        font-size: 20px;
+        text-align: center;
+    }
+    #fixIt {
+        margin: auto;
+        width: 100%;
+    }
+  }
+  
+  /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+  @media screen and (max-width: 400px) {
+    .sidebar a {
+      text-align: center;
+      float: none;
+    }
+  }
+
+
+  /* styling the nav bar */
+
+  @media (max-width: 700px){
+    #setMargin{
+        margin-left: 0px!important;
+    }
+}
+@media (min-width: 701px){
+    #setMargin{
+        margin-left: 0px;
+    }
+}
+
+#ad-card{
+    margin-top: 70px;
+}
+.collapsible.style{
+    max-width: 280px;
+    min-width: 280px;
+}
+
+@media (max-width: 700px){
+    .rowCell{
+        max-width: 90%;
+        min-width:90%;
+        margin: auto;
+    }
+    .collapsible.style{
+        max-width: 100%;
+        min-width:100%;
+    }
+}
+.navbar{
+    background-color: #009900!important;
+
+}
+.navbar-brand{
+    padding: 0;
+    padding-left: 20px;
+    color: white!important;
+
+}
+
+@media (min-width: 992px){
+    a.nav-link{
+        color:white!important;
+    }
+    .navbar{
+        z-index: 999;
+    }
+    .navbar ul,a{
+        max-height: 64px;
+    }
+    .mr-auto{
+        margin-right: 0px!important;
+        margin-left: auto;
+    }
+    .dropdown-menu.show {
+        position: relative!important;
+    }
+    .nav-item.dropdown{
+        width: 150px;
+    }
+    .dropdown-menu{
+    top: 0!important;
+}
+
+}
+
+@media (max-width: 991px){
+    button.navbar-toggler:focus{
+        background-color:#009900;
+        border: 1px solid white;
+        outline: none;
+    }
+    button.navbar-toggler{
+        background-color:white;
+        outline: none;
+        margin-right: 20px;
+    }
+    .navbar-collapse{
+        z-index: 999;
+        background-color: white;
+        border-radius: 5px;
+        border: solid 2px #009900;
+        padding-left: 5px;
+    }   
+    #logo{
+        margin-top: 20px;
+    }
+}

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <!-- Compiled and minified JavaScript -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+
+    <title>Animal</title>
+    <link rel="icon" 
+      type="image/png" 
+      href="assets/images/Logo.jpeg">
+</head>
+
+
+<body>
+    <style>
+
+        #ad-card{
+            margin-top: 70px;
+        }
+        .navbar{
+            background-color: #009900!important;
+        }
+        .navbar-brand{
+            padding: 0;
+            padding-left: 20px;
+            color: white!important;
+        }
+        
+        @media (min-width: 992px){
+            a.nav-link{
+                color:white!important;
+            }
+            .navbar{
+                z-index: 999;
+            }
+            .navbar ul,a{
+                max-height: 64px;
+            }
+            .mr-auto{
+                margin-right: 0px!important;
+                margin-left: auto;
+            }
+
+            .dropdown-menu.show {
+                position: relative!important;
+                
+            }
+            .dropdown-menu{
+                top: 0!important;
+            }
+            .nav-item.dropdown{
+                width: 150px;
+            }
+        }
+
+        
+        @media (max-width: 991px){
+            button.navbar-toggler:focus{
+                background-color:#009900;
+                border: 1px solid white;
+                outline: none;
+            }
+            button.navbar-toggler{
+                background-color:white;
+                margin-right: 20px;
+                outline: none;
+            }
+            .navbar-collapse{
+                z-index: 999;
+                background-color: white;
+                border-radius: 5px;
+                border: solid 2px #009900;
+                padding-left: 5px;
+            }   
+            #logo{
+                margin-top: 20px;
+            }
+        }
+        
+        </style>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="index.html">PetAwesome</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html"> | Home </a>
+            </li>
+            <div class="dropdown-divider"></div>
+            <li class="nav-item" id="dogActive">
+              <a class="nav-link" href="animal.html?animal=Dog"> | Dog</a>
+            </li>
+            <div class="dropdown-divider"></div>
+            <li class="nav-item" id="catActive">
+              <a class="nav-link" href="animal.html?animal=Cat"> | Cat</a>
+            </li>
+            <div class="dropdown-divider"></div>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                 | Other
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="animal.html?animal=Barnyard">Barnyard</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="animal.html?animal=Bird">Bird</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="animal.html?animal=Horse">Horse</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="animal.html?animal=Reptile">Reptile</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="animal.html?animal=Smallfurry">Smallfurry</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+    </nav>
+
+    <div class="row" id="ad-card">
+        <div class="col s12">
+            <div class="info">
+                <img src="assets/images/Logo.jpeg" alt="logo" id="logo">
+                <h3 id="motto"></h3>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col s3">
+            </div>
+
+            <div class="col s12" style="max-width: 500px;">
+                <ul class="collection with-header">
+                    <li class="collection-header center" style='background-color: #009900; color: white'><h4>Refine your search</h4><p class="center">(Optional)</p></li>
+                    <li class="collection-item center"> 
+                        <div class="input-field">
+                            <input placeholder="Enter Zip Code" id="zip_code" type="number" maxlength="5" class="validate">
+                        </div>
+                    </li>
+                    <li class="collection-item" style='max-width: 300px' hidden>
+                        <select id="age">
+                            <option value="" disabled selected>Age (requires zipcode)</option>
+                            <option value="Baby">Baby</option>
+                            <option value="Young">Young</option>
+                            <option value="Adult">Adult</option>
+                            <option value="Senior">Senior</option>
+                        </select>
+                    </li>
+                    <li class="collection-item center" style='max-width: 300px; margin: auto'>
+                        <select id="size">
+                            <option value="" disabled selected>Size</option>
+                            <option value="Small">Small</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Large">Large</option>
+                            <option value="XL">Extra Large</option>
+                        </select>
+                    </li>
+                    <li class="collection-item" style='max-width: 300px; margin: auto'>
+                        <select id="gender">
+                            <option value="" disabled selected>Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </li>
+                    <li class="collection-item" style='max-width: 300px; margin: auto' id="breedId" hidden>
+                        <select id="breed">
+                            <option value="" disabled selected>Breed</option>
+                        </select>
+                    </li>
+                    <div class="btn-wrapper">
+                            <button id='submit-btn' onclick class='left btn waves-effect waves-light' style='background-color: #009900'> Submit </button>
+                            <!--<button id='skip-btn' onclick class='right btn waves-effect waves-light' style='background-color: gray'> Skip </button>
+-->
+                    </div>
+            </div>
+
+            <div class="col s3">
+            </div>
+        </div>
+    </div>
+
+    
+
+    <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCske3mJ2ApUAsozgJbZ2855ecvMLzjons",
+            authDomain: "petawesomeapi-keys.firebaseapp.com",
+            databaseURL: "https://petawesomeapi-keys.firebaseio.com",
+            projectId: "petawesomeapi-keys",
+            storageBucket: "petawesomeapi-keys.appspot.com",
+            messagingSenderId: "167854498400"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+
+    <script src="assets/javascript/setLocalAnimal.js"></script>
+</body>
+
+
+</html>
